@@ -13,7 +13,9 @@ public class MyYapPlugin: NSObject, FlutterPlugin {
       let viewFactory = DynamicNativeViewFactory(messenger: registrar.messenger())
     registrar.register(
       viewFactory,
-          withId: "native_screen")
+          withId: "native_screen",
+          // new test 
+          gestureRecognizersBlockingPolicy:FlutterPlatformViewGestureRecognizersBlockingPolicyWaitUntilTouchesEnded)
 
 
   }
